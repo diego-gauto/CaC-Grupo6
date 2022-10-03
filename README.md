@@ -1,9 +1,9 @@
 # Codo a Codo-Grupo6
 
 ## Tabla de contenidos
-1. [Información General](#Información general)
+1. [Información General](#información-general)
 2. [Tecnologías](#tecnologías)
-3. [Colaboradores](#Colaboraciones)
+3. [Equipo](#equipo)
 ### Información general
 ***
 Como elección de desarrollo para la presentación del proyecto hemos elegido desarrollar una plataforma E-Commerce. 
@@ -25,6 +25,6 @@ Para el desarrollo del Back:
 Para el desarrollo de la base de datos:
 * [MySQL](https://example.com): Version ?
 
-## Colaboraciones
+## Equipo
 ***
 Para la organización del equipo se utiliza la metodología Ágil Scrum. Como herramienta visual para poder aplicar Scrum utilizamos Attlasian Jira .
