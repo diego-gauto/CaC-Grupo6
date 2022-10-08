@@ -22,3 +22,7 @@ nav {
 .navbar-brand:hover {
   color: rgb(82, 93, 148);
 }
+
+#navbarTogglerDemo02 {
+  text-align: end;
+}
