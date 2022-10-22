@@ -1,0 +1,40 @@
+.container-fluid  {
+    background-color:rgb(32, 8, 59);
+    margin: auto;
+
+}
+.navbar-toggler-icon {
+    background-color:rgb(32, 8, 59)
+
+}
+.nav-link {
+    color: rgba(255, 255, 255, 0.705) ;
+    
+}
+.navbar-toggler {
+    background-color:rgb(32, 8, 59)
+}
+
+#email {
+    padding: left 20px; 
+    padding: right 20px; ;
+}
+
+.card-text {
+    color: aliceblue;
+}
+
+.btn-primary {
+background-color: rgb(175, 31, 180);
+border-color: rgb(175, 31, 180) ;
+--bs-btn-hover-color: var(--bs-white);
+--bs-btn-hover-bg: #{shade-color($bd-violet, 10%)};
+--bs-btn-hover-border-color: #{shade-color($bd-violet, 10%)};
+--bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+}
+
+#email {
+    text-align: center;
+    padding-left: 22%;
+    padding-right: 22%;
+ }
