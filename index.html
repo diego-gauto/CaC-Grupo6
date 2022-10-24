@@ -16,17 +16,126 @@
   <body>
     <header>
       <!- Aca abajo Diego desarrolla el Header->
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#" target="_blank">
+            <img
+              src="./images/logo.png"
+              alt="Logo E-Market"
+              height="60"
+              class="d-inline-block align-text-center"
+            />
+            SHOPPING Six
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarTogglerDemo02"
+          >
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Registrarse</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Ingresar</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <img
+                    src="./images/carrito.png"
+                    alt="carrito"
+                    height="30"
+                    class="d-inline-block align-text-center"
+                  />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
     <main>
+
       <!- Aca abajo Melina desarrolla una seccion mostrando los medios de pagos permitidos->
 
       <!- Aca abajo Marisol desarrolla buscar productos->
-
+        <div id="botonBusqueda" class="container-fluid">
+          <form class="d-flex" role="search">
+            <input class="form-control " type="search" placeholder="Buscar producto por nombre" aria-label="Search">
+            <button class="btn btn-outline-success text-white" type="submit" > <img id="lupitaB" src="./images/lupitaIcon.png" alt="">Buscar</button>
+          </form>
+        </div>
       <!- Aca abajo Eduardo desarrolla un dropdown con las categorias de los productos->
-
+      
+      <nav class="navbar navbar-expand-lg" style="background-color: #e3f2fd;">
+        <div class="container-fluid">
+          
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav  ps-5">
+              
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Categorías
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Zapatillas</a></li>
+                  <li><a class="dropdown-item" href="#">Zapatos</a></li>
+                  <li><a class="dropdown-item" href="#">Botas</a></li>
+                  <li><a class="dropdown-item" href="#">Sandalias y Ojotas</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><h6 class="dropdown-header">Género</h6></li>
+                  <li><a class="dropdown-item" href="#">Hombre</a></li>
+                  <li><a class="dropdown-item" href="#">Mujer</a></li>
+                  <li><a class="dropdown-item" href="#">Sin Género</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
       <!- Aca abajo Johana desarrolla el carrousel para mostrar productos destacados->
-
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="container w-50">
+            <h5 class="texto">PRODUCTOS DESTACADOS</h5>
+            <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="./images/zapa rosa.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="./images/zapacolores.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="./images/zapanara.png" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon bg-dark" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon bg-dark" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        </div>
+    
       <!- Aca abajo Roberto desarrolla el grupo de cards para mostrar productos en oferta->
+      
       <img src="./Images/ofertas banner" class="card-img-top" alt="Ofertas Banner">
       <div class="card-group">
         <div class="card">
@@ -86,10 +195,10 @@
           </div>
         </div>
       </div>
-      
+
     </main>
     <footer>
-      <!- Aca abajo Milagros desarrolla el footer con info de la empresa, redes sociales y copyright->
+
     </footer>
 
     <script
@@ -101,6 +210,6 @@
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
       integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
       crossorigin="anonymous"
-    ></script>
-  </body>
+      ></script>      
+      </body>
 </html>
