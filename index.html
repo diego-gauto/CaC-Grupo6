@@ -16,9 +16,9 @@
   <body>
     <header>
       <!- Aca abajo Diego desarrolla el Header->
-      <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#" target="_blank">
+      <nav class="navbar navbar-expand-lg navegacion">
+        <div class="container contenedor-nav">
+          <a class="navbar-brand logo-nav" href="#" target="_blank">
             <img
               src="./images/logo.png"
               alt="Logo E-Market"
@@ -69,7 +69,7 @@
       <!- Aca abajo Melina desarrolla una seccion mostrando los medios de pagos permitidos->
 
       <!- Aca abajo Marisol desarrolla buscar productos->
-        <div id="botonBusqueda" class="container-fluid">
+        <div id="botonBusqueda" class="">
           <form class="d-flex" role="search">
             <input class="form-control " type="search" placeholder="Buscar producto por nombre" aria-label="Search">
             <button class="btn btn-outline-success text-white" type="submit" > <img id="lupitaB" src="./images/lupitaIcon.png" alt="">Buscar</button>
@@ -77,7 +77,7 @@
         </div>
       <!- Aca abajo Eduardo desarrolla un dropdown con las categorias de los productos->
       
-      <nav class="navbar navbar-expand-lg" style="background-color: #e3f2fd;">
+      <!-- <nav class="navbar navbar-expand-lg" style="background-color: #e3f2fd;">
         <div class="container-fluid">
           
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -102,7 +102,18 @@
             </ul>
           </div>
         </div>
-      </nav>
+      </nav> -->
+      <div id="categorias">
+
+        <select class="form-select">
+          <option selected="true" disabled="disabled">Seleccione una categoría</option>
+          <option value="zapatillas">Zapatillas</option>
+          <option value="zapatos">Zapatos</option>
+          <option value="botas">Botas</option>
+          <option value="sandalias">Sandalias y Ojotas</option>
+        </select>
+      </div>
+
       <!- Aca abajo Johana desarrolla el carrousel para mostrar productos destacados->
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
           <div class="carousel-indicators">
@@ -197,76 +208,70 @@
       </div>
 
     </main>
-    <footer>
 
-      <!-- Aca abajo Milagros desarrolla el footer con info de la empresa, redes sociales y copyright-->
+
+      <!-- Aca abajo Milagros desarrolla el footer con info de la empresa, redes sociales y copyright
       <nav class="navbar navbar-expand-lg" >
         <div class="container-fluid">
-          <!-- <img src="./shoppingsix.jpg" class="rounded float-start" alt="logo"height="150" width="150" style="margin-left:2.9%;" > -->
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNavDarkDropdown" style="padding-left: 7%;">
             <div class="container text-center">
-            <ul class="navbar-nav">
+            <ul class="navbar-nav"> -->
                 <footer id="footer">
-                     <ul class="nav justify-content-center" >
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">Preguntas Frecuentes</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">Términos y condiciones</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">Defensa al consumidor </a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">Política de privacidad </a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">Envíos y cambios </a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">Formas de pagos </a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">Primera vez comprando</a>
-                      </li>
-                    </ul>
-                    <br>
-                    <div class= container-fluid> 
-                        <p class="card-text">Encontranos en nuestras redes!</p>
-                        <a href="#" class="btn btn-primary" id="redes">Facebook</a>
-                        <a href="#" class="btn btn-primary" id="redes">Instagram</a>
-                        <a href="#" class="btn btn-primary" id="redes">YouTube</a>
-       
-                   </div>
-                   <br>
-                    <div class= conteiner-fluid> 
+                  <ul class="nav justify-content-center" >
+                    <li class="nav-item">
+                      <a class="nav-link text-muted" href="#">Preguntas Frecuentes</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link text-muted" href="#">Términos y condiciones</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link text-muted" href="#">Defensa al consumidor </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link text-muted" href="#">Política de privacidad </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link text-muted" href="#">Envíos y cambios </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link text-muted" href="#">Formas de pagos </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link text-muted" href="#">Primera vez comprando</a>
+                    </li>
+                  </ul>
+                  <br>
+                  <div class= container-fluid> 
+                    <p class="card-text text-muted">Encontranos en nuestras redes!</p>
+                    <a href="#" class="btn btn-primary" id="redes">Facebook</a>
+                    <a href="#" class="btn btn-primary" id="redes">Instagram</a>
+                    <a href="#" class="btn btn-primary" id="redes">YouTube</a>
+                  </div>
+                  <br>
+                  <div class= conteiner-fluid> 
                     <div class="footer-seo__module footer-seo__module--uservoice">
-                
-                        <div id="mc_embed_signup">
+                      <div id="mc_embed_signup">
                         <div class="form-group form-group--icon form-group--email mb-3" id="email">
-                        <input class="email form-control" id="email" name="email" placeholder="Suscribite para enterate de nuestras novedades" type="email" >
+                          <input class="email form-control" id="email" name="email" placeholder="Suscribite para enterate de nuestras novedades" type="email" >
                         </div>
-                        <input class="btn btn-primary mb-3" name="suscribite" type="submit" value="Suscribite">
-                        </form>
+                          <input class="btn btn-primary mb-3" name="suscribite" type="submit" value="Suscribite">
                         </div>
-                        
-                        </div>
-                    </div>
-                    <div class="container-fluid text-muted"> 
-                        <span>© 2022 ShoppingSix. Todos los derechos reservados. </span>  
-          
                       </div>
-                </div>
+                    </div>
+                  <div class="container-fluid text-muted"> 
+                  <span>© 2022 ShoppingSix. Todos los derechos reservados. </span>
+                </footer>
+                <!-- </div>
               </li>
             </ul>
             
-          </div>
+          </div> -->
 
 
-    </footer>
+
 
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
