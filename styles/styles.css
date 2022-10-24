@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -27,6 +28,37 @@ nav {
   text-align: end;
 }
 
+#pagos{
+    background-color: rgb(230, 231, 232);
+    margin: auto;
+}
+
+#titulo-pagos{
+    text-align: center;
+    color: rgb(10, 90, 170);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+}
+
+#texto-pagos{
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(15, 118, 182);
+    width: 40%;
+    height: 50%;
+    align-content: center;
+    padding: auto;
+    margin-left: 30%;
+
+
+}
+
+#imagen-pagos{
+    margin-left: 30%;
+    padding-left: 10%;
+    width: 40%;
+    height: 80%;
+}
 
 
 #botonBusqueda {
