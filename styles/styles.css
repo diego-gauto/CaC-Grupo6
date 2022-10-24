@@ -1,3 +1,33 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  background-color: #c6f0f0;
+}
+
+.container-fluid {
+  padding: 0 3%;
+}
+
+.navbar-brand {
+  color: rgb(124, 134, 183);
+  font-size: 1.5em;
+  font-weight: 600;
+  letter-spacing: 0.5em;
+}
+
+.navbar-brand:hover {
+  color: rgb(82, 93, 148);
+}
+
+#navbarTogglerDemo02 {
+  text-align: end;
+}
+
 #pagos{
     background-color: rgb(230, 231, 232);
     margin: auto;
@@ -29,3 +59,93 @@
     width: 40%;
     height: 80%;
 }
+
+
+#botonBusqueda {
+    padding-top: 15%;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+.btn {
+    background-color: rgb(250, 88, 73);
+    
+}
+#lupitaB{
+    height: 1.5em
+
+}
+
+
+
+.texto{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #d0ff00;
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+    font-weight: 100;
+    color:#000000;
+}
+
+
+
+
+/* center {
+
+ display: flex;
+ justify-content: center;
+align-items: center; 
+padding: 20px;
+}*/
+
+ #center-img{
+
+   display: block;
+   margin-left:auto;
+   margin-right:auto;
+
+ }
+
+
+
+
+.container-fluid  {
+    background-color:rgb(32, 8, 59);
+    margin: auto;
+
+}
+.navbar-toggler-icon {
+    background-color:rgb(32, 8, 59)
+
+}
+.nav-link {
+    color: rgba(255, 255, 255, 0.705) ;
+    
+}
+.navbar-toggler {
+    background-color:rgb(32, 8, 59)
+}
+
+#email {
+    padding: left 20px; 
+    padding: right 20px; ;
+}
+
+.card-text {
+    color: aliceblue;
+}
+
+.btn-primary {
+background-color: rgb(175, 31, 180);
+border-color: rgb(175, 31, 180) ;
+--bs-btn-hover-color: var(--bs-white);
+--bs-btn-hover-bg: #{shade-color($bd-violet, 10%)};
+--bs-btn-hover-border-color: #{shade-color($bd-violet, 10%)};
+--bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+}
+
+#email {
+    text-align: center;
+    padding-left: 22%;
+    padding-right: 22%;
+ }

@@ -16,10 +16,55 @@
   <body>
     <header>
       <!- Aca abajo Diego desarrolla el Header->
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#" target="_blank">
+            <img
+              src="./images/logo.png"
+              alt="Logo E-Market"
+              height="60"
+              class="d-inline-block align-text-center"
+            />
+            SHOPPING Six
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarTogglerDemo02"
+          >
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Registrarse</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Ingresar</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <img
+                    src="./images/carrito.png"
+                    alt="carrito"
+                    height="30"
+                    class="d-inline-block align-text-center"
+                  />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
     <main>
-
-
       <!- Aca abajo Melina desarrolla una seccion mostrando los medios de pagos permitidos->
       <div>
         <img src="./img/cuotas.jpeg" class="rounded mx-auto d-block" alt="..." width="150px" height="70px">
@@ -41,15 +86,203 @@
         </div>
       </div>
       <!- Aca abajo Marisol desarrolla buscar productos->
-
+        <div id="botonBusqueda" class="container-fluid">
+          <form class="d-flex" role="search">
+            <input class="form-control " type="search" placeholder="Buscar producto por nombre" aria-label="Search">
+            <button class="btn btn-outline-success text-white" type="submit" > <img id="lupitaB" src="./images/lupitaIcon.png" alt="">Buscar</button>
+          </form>
+        </div>
       <!- Aca abajo Eduardo desarrolla un dropdown con las categorias de los productos->
-
+      
+      <nav class="navbar navbar-expand-lg" style="background-color: #e3f2fd;">
+        <div class="container-fluid">
+          
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav  ps-5">
+              
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Categorías
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Zapatillas</a></li>
+                  <li><a class="dropdown-item" href="#">Zapatos</a></li>
+                  <li><a class="dropdown-item" href="#">Botas</a></li>
+                  <li><a class="dropdown-item" href="#">Sandalias y Ojotas</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><h6 class="dropdown-header">Género</h6></li>
+                  <li><a class="dropdown-item" href="#">Hombre</a></li>
+                  <li><a class="dropdown-item" href="#">Mujer</a></li>
+                  <li><a class="dropdown-item" href="#">Sin Género</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
       <!- Aca abajo Johana desarrolla el carrousel para mostrar productos destacados->
-
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="container w-50">
+            <h5 class="texto">PRODUCTOS DESTACADOS</h5>
+            <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="./images/zapa rosa.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="./images/zapacolores.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="./images/zapanara.png" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon bg-dark" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon bg-dark" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        </div>
+    
       <!- Aca abajo Roberto desarrolla el grupo de cards para mostrar productos en oferta->
+      
+      <img src="./Images/ofertas banner" class="card-img-top" alt="Ofertas Banner">
+      <div class="card-group">
+        <div class="card">
+          <img src="./Images/Zapatillas Adidas mujer" class="card-img-top" alt="Foto zapatillas adidas mujer">
+          <div class="card-body">
+            <h5 class="card-title">Zapatillas Adidas Grand Court Mujer</h5>
+            <p class="card-text">$16.999</p>
+            <p class="card-text"><small class="text-muted">Renová tu estilo con el toque de frescura a la moda de nuestras zapatillas Adidas Grand Court.
+              Estas hermosas zapatillas tienen detalles de elegancia clásicos y tecnología de confort, que incluye nuestra plantilla SoftFoam+, que proporciona una apariencia y sensación que redefinirán tu concepto de estilo.</small></p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./Images/zapatillas nike mujer" class="card-img-top" alt="Foto Zapatillas Nike Mujer">
+          <div class="card-body">
+            <h5 class="card-title">Zapatillas Nike Air Max Mujer</h5>
+            <p class="card-text">$25.000</p>
+            <p class="card-text"><small class="text-muted"> Viví la experiencia de Nike Air Max cuenta con la unidad Max Air más grande hasta la fecha. Con una amortiguación excepcional y detalles modernos, estas zapatillas irradian frescura al tiempo que brinda una comodidad óptima.</small></p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./Images/zapatillas puma mujer.jpeg" class="card-img-top" alt="Foto Zapatillas Puma Mujer">
+          <div class="card-body">
+            <h5 class="card-title">Zapatillas Puma Comet 2 Running Mujer</h5>
+            <p class="card-text">$19.999</p>
+            <p class="card-text"><small class="text-muted"> Preparate para despegar con la sensación ultra acolchada de las Comet 2.
+              La espuma SOFTRIDE en el talón proporciona una amortiguación óptima, mientras que la plantilla Softfoam+ agrega comodidad en cada paso. </small></p>
+          </div>
+          
+        </div>
+        
+      </div>
+      <div class="card-group">
+        <div class="card">
+          <img src="./Images/zapatillas adidas calle.jpg" class="card-img-top" alt="Zapatillas adidas hombre">
+          <div class="card-body">
+            <h5 class="card-title">Zapatillas Adidas Calle Hombre</h5>
+            <p class="card-text">$16.999</p>
+            <p class="card-text"><small class="text-muted">Estas zapatillas están inspiradas en los clásicos diseños deportivos del pasado y actualizadas para el mundo de hoy. Lucen un exterior en gamuza suave perfecto para tu día a día con las características 3 Tiras en los costados para darles un toque extra de estilo</small></p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./Images/zapatillas nike hombre.JPG" class="card-img-top" alt="Zapatillas hombre nike">
+          <div class="card-body">
+            <h5 class="card-title">Zapatillas casual de hombre Air Max Plus Nike</h5>
+            <p class="card-text">$23.000</p>
+            <p class="card-text"><small class="text-muted"> Muestra tu estilo con las Nike Air Max Plus te aportan estilo y una experiencia única, que ofrece una estabilidad premium y una amortiguación increíble.</small></p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./Images/Zapatillas Puma Hombre.jpg" class="card-img-top" alt="Zapatillas Puma Hombre">
+          <div class="card-body">
+            <h5 class="card-title">Zapatillas Puma Running Hombre</h5>
+            <p class="card-text">$21.000</p>
+            <p class="card-text"><small class="text-muted">Fabricadas para los corredores y diseñadas para llamar la atención, este par se convertirá rápidamente en tu favorito para salir a correr.
+              Tecnología Soft Foam en la plantilla que permite una pisada confortable y adaptable a tu pie.
+              Diseñada para corredores con pisada neutra.</small></p>
+          </div>
+        </div>
+      </div>
+
     </main>
     <footer>
-      <!- Aca abajo Milagros desarrolla el footer con info de la empresa, redes sociales y copyright->
+
+      <!-- Aca abajo Milagros desarrolla el footer con info de la empresa, redes sociales y copyright-->
+      <nav class="navbar navbar-expand-lg" >
+        <div class="container-fluid">
+          <!-- <img src="./shoppingsix.jpg" class="rounded float-start" alt="logo"height="150" width="150" style="margin-left:2.9%;" > -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDarkDropdown" style="padding-left: 7%;">
+            <div class="container text-center">
+            <ul class="navbar-nav">
+                <footer id="footer">
+                     <ul class="nav justify-content-center" >
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Preguntas Frecuentes</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Términos y condiciones</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Defensa al consumidor </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Política de privacidad </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Envíos y cambios </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Formas de pagos </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Primera vez comprando</a>
+                      </li>
+                    </ul>
+                    <br>
+                    <div class= container-fluid> 
+                        <p class="card-text">Encontranos en nuestras redes!</p>
+                        <a href="#" class="btn btn-primary" id="redes">Facebook</a>
+                        <a href="#" class="btn btn-primary" id="redes">Instagram</a>
+                        <a href="#" class="btn btn-primary" id="redes">YouTube</a>
+       
+                   </div>
+                   <br>
+                    <div class= conteiner-fluid> 
+                    <div class="footer-seo__module footer-seo__module--uservoice">
+                
+                        <div id="mc_embed_signup">
+                        <div class="form-group form-group--icon form-group--email mb-3" id="email">
+                        <input class="email form-control" id="email" name="email" placeholder="Suscribite para enterate de nuestras novedades" type="email" >
+                        </div>
+                        <input class="btn btn-primary mb-3" name="suscribite" type="submit" value="Suscribite">
+                        </form>
+                        </div>
+                        
+                        </div>
+                    </div>
+                    <div class="container-fluid text-muted"> 
+                        <span>© 2022 ShoppingSix. Todos los derechos reservados. </span>  
+          
+                      </div>
+                </div>
+              </li>
+            </ul>
+            
+          </div>
+
+
     </footer>
 
     <script
@@ -61,6 +294,6 @@
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
       integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
       crossorigin="anonymous"
-    ></script>
-  </body>
+      ></script>      
+      </body>
 </html>
