@@ -27,6 +27,8 @@ nav {
   text-align: end;
 }
 
+
+
 #botonBusqueda {
     padding-top: 15%;
     padding-left: 15%;
@@ -39,4 +41,16 @@ nav {
 #lupitaB{
     height: 1.5em
 
+}
+
+
+
+.texto{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #d0ff00;
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+    font-weight: 100;
+    color:#000000;
 }
