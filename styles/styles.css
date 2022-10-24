@@ -54,3 +54,22 @@ nav {
     font-weight: 100;
     color:#000000;
 }
+
+
+
+
+/* center {
+
+ display: flex;
+ justify-content: center;
+align-items: center; 
+padding: 20px;
+}*/
+
+ #center-img{
+
+   display: block;
+   margin-left:auto;
+   margin-right:auto;
+
+ }
