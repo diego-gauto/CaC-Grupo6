@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  background-color: #c6f0f0;
+}
+
+.container-fluid {
+  padding: 0 3%;
+}
+
+.navbar-brand {
+  color: rgb(124, 134, 183);
+  font-size: 1.5em;
+  font-weight: 600;
+  letter-spacing: 0.5em;
+}
+
+.navbar-brand:hover {
+  color: rgb(82, 93, 148);
+}
+
+#navbarTogglerDemo02 {
+  text-align: end;
+}
+
+#botonBusqueda {
+    padding-top: 15%;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+.btn {
+    background-color: rgb(250, 88, 73);
+    
+}
+#lupitaB{
+    height: 1.5em
+
+}
