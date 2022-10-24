@@ -27,8 +27,12 @@
   text-align: end;
 }
 
+#banner-pagos {
+  padding: 2% 10% 0 10%;
+}
+
 #botonBusqueda {
-  padding: 2% 15%;
+  padding: 2% 10%;
 }
 .btn {
   background-color: rgb(250, 88, 73);
@@ -38,7 +42,7 @@
 }
 
 #categorias {
-  padding: 0 15%;
+  padding: 0 10%;
   height: 10em;
 }
 
@@ -53,39 +57,19 @@
   color: #000000;
 }
 
-/* center {
-
- display: flex;
- justify-content: center;
-align-items: center; 
-padding: 20px;
-}*/
-
 #center-img {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
-.card-group {
-  padding: 2% 0;
+.card-group,
+.card-img-top {
+  padding: 2% 10% 0 10%;
 }
-
-/* .container-fluid {
-  background-color: rgb(32, 8, 59);
-  margin: auto;
-}
-.navbar-toggler-icon {
-  background-color: rgb(32, 8, 59);
-}
-.nav-link {
-  color: rgba(255, 255, 255, 0.705);
-}
-.navbar-toggler {
-  background-color: rgb(32, 8, 59);
-} */
 
 footer {
+  margin-top: 2%;
   background-color: rgb(172, 172, 242);
   text-align: center;
 }
