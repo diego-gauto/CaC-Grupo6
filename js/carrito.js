@@ -1,56 +1,71 @@
 import { handleLoginLogout } from "./utils.js";
 
-const carritoMockeo = [
-  {
+const pagoTarjeta = document.getElementById("flexRadioTarjeta");
+const pagoTransferencia = document.getElementById("flexRadioTransferencia");
+const divTarjeta = document.getElementById("pago_tarjeta");
+const divTransferencia = document.getElementById("pago_transferencia");
+const buttonComprar = document.getElementsByClassName("pagar");
+
+const carritoMockeo = {
+  1: {
     id: 1,
     nombre: "Producto 1",
     img: "../images/notebook.webp",
-    precio: 1000,
     descripcion: "lorem insump 1",
+    categoria: "electrodomesticos",
+    precio: 1000,
+    descuento: 20,
     stock: 10,
-    categoria: "electrodomesticos",
+    createdAt: "2012-08-21T08:00:00.000Z",
   },
-  {
-    id: 2,
-    nombre: "Producto 2",
-    img: "../images/notebook.webp",
-    precio: 2000,
-    descripcion: "lorem insump 2",
-    stock: 20,
-    categoria: "electrodomesticos",
-  },
-  {
+  3: {
     id: 3,
     nombre: "Producto 3",
     img: "../images/notebook.webp",
-    precio: 3000,
     descripcion: "lorem insump 3",
-    stock: 30,
     categoria: "electrodomesticos",
+    precio: 1000,
+    descuento: 20,
+    stock: 10,
+    createdAt: "2012-08-23T08:00:00.000Z",
   },
-  {
-    id: 4,
-    nombre: "Producto 4",
-    img: "../images/notebook.webp",
-    precio: 4000,
-    descripcion: "lorem insump 4",
-    stock: 40,
-    categoria: "electrodomesticos",
-  },
-  {
+  5: {
     id: 5,
     nombre: "Producto 5",
     img: "../images/notebook.webp",
-    precio: 5000,
     descripcion: "lorem insump 5",
-    stock: 50,
     categoria: "electrodomesticos",
+    precio: 1000,
+    descuento: 20,
+    stock: 10,
+    createdAt: "2012-08-25T08:00:00.000Z",
   },
-];
-
+  7: {
+    id: 7,
+    nombre: "Producto 7",
+    img: "../images/notebook.webp",
+    descripcion: "lorem insump 7",
+    categoria: "electrodomesticos",
+    precio: 1000,
+    descuento: 20,
+    stock: 10,
+    createdAt: "2012-08-27T08:00:00.000Z",
+  },
+  9: {
+    id: 9,
+    nombre: "Producto 9",
+    img: "../images/notebook.webp",
+    descripcion: "lorem insump 9",
+    categoria: "electrodomesticos",
+    precio: 1000,
+    descuento: 20,
+    stock: 10,
+    createdAt: "2012-08-29T08:00:00.000Z",
+  },
+};
 localStorage.setItem("carrito", JSON.stringify(carritoMockeo));
 
-const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+const carrito = JSON.parse(localStorage.getItem("carrito")) || {};
 
 const generarCards = (productos) => {
   // Obtenemos el div que contendra las cards de productos
@@ -58,46 +73,73 @@ const generarCards = (productos) => {
 
   let total = 0;
 
-  productos.forEach((producto) => {
-    total += producto.precio; // total = total + producto.precio;
+  //productos.forEach((producto) => {
+  for (const key in productos) {
+    total += productos[key].precio; // total = total + producto.precio;
 
     // Creamos la etiqueta Card
     let cardProductos = document.createElement("div");
     cardProductos.className = "card m-3";
 
     let card = `
-              <img class="card-img-top h-50 w-50" src="${producto.img}" alt="Card image cap">
+              <img class="card-img-top h-50 w-50" src="${productos[key].img}" alt="Card image cap">
               <div class="card-body">
-                  <h4 class="card-title">${producto.nombre}</h4>
+                  <h4 class="card-title">${productos[key].nombre}</h4>
                   <p class="card-text">
-                      ${producto.descripcion}
+                      ${productos[key].descripcion}
                   </p>
                   <p class="card-text">
-                      ${producto.precio}
+                      ${productos[key].precio}
                   </p>
-                  <a class="btn btn-primary" id="cart${producto.id}">Eliminar</a>
+                  <a class="btn btn-primary" id="cart${productos[key].id}">Eliminar</a>
               </div>
           `;
 
     cardProductos.innerHTML = card;
     cards.appendChild(cardProductos);
 
-    let productCard = document.getElementById("cart" + producto.id);
+    let productCard = document.getElementById("cart" + productos[key].id);
 
     productCard.addEventListener("click", (evento) => {
       evento.preventDefault();
-      carrito.splice(producto.id - 1, 1);
+      console.log(`${productos[key].id} eliminado`);
+      delete productos[key];
+      console.log(productos);
+      localStorage.setItem("carrito", JSON.stringify(productos));
+      location.reload();
     });
-  });
+  }
 };
+
+handleLoginLogout();
 
 generarCards(carrito);
 
-/*const formulario = document.getElementById("form-carrito");
+pagoTarjeta.addEventListener("click", () => {
+  //console.log(e.target.checked);
+  // if (e.target.checked) {
+  divTarjeta.style.display = "flex";
+  divTarjeta.style.flexDirection = "column";
+  divTransferencia.style.display = "none";
+});
 
-formulario.addEventListener("submit", (evento) => {
-  evento.preventDefault();
-  localStorage.setItem("Carrito", JSON.stringify(carrito));
-});*/
+pagoTransferencia.addEventListener("click", () => {
+  //console.log(e.target.checked);
+  // if (e.target.checked) {
+  divTransferencia.style.display = "flex";
+  divTransferencia.style.flexDirection = "column";
+  divTarjeta.style.display = "none";
+});
 
-handleLoginLogout();
+Array.prototype.slice.call(buttonComprar).forEach((button) => {
+  button.addEventListener("click", (e) => {
+    e.preventDefault();
+    const products = JSON.parse(localStorage.getItem("products"));
+    for (const key in carrito) {
+      delete products[key];
+    }
+    localStorage.setItem("products", JSON.stringify(products));
+    localStorage.setItem("carrito", JSON.stringify({}));
+    window.location.href = "../index.html";
+  });
+});

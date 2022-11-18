@@ -11,6 +11,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="../styles/styles.css" />
+    <link rel="stylesheet" href="../styles/carrito.css" />
     <title>E-Commerce( Grupo 6)</title>
   </head>
   <body>
@@ -65,10 +66,137 @@
       </nav>
     </header>
     <main>
-      <h2>Aca va el carrito</h2>
+      <h2 class="d-flex justify-content-center">Tus compras</h2>
+
+      <div id="carrito" class="d-flex"></div>
       <form action="#" id="form-carrito">
-        <div id="carrito" class="d-flex justify-content-between"></div>
-        <input type="submit" value="Finalizar" />
+        <h2 class="d-flex justify-content-center">
+          El total a pagar es $ 00.00
+        </h2>
+        <h3 class="d-flex justify-content-center">
+          Selecione un medio de pago
+        </h3>
+        <div id="select_pago" class="d-flex justify-content-center">
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="flexRadioPago"
+              id="flexRadioTarjeta"
+              checked
+            />
+            <label class="form-check-label" for="flexRadioTarjeta">
+              Tarjeta de Crédito / Débito
+            </label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="flexRadioPago"
+              id="flexRadioTransferencia"
+            />
+            <label class="form-check-label" for="flexRadioTransferencia">
+              Transferencia
+            </label>
+          </div>
+        </div>
+        <div id="pago_tarjeta">
+          <form class="row g-3">
+            <div class="col-md-12">
+              <label for="credit_card_number" class="form-label"
+                >Número Tarjeta</label
+              >
+              <input
+                type="text"
+                limit="16"
+                class="form-control"
+                id="credit_card_number"
+              />
+            </div>
+            <div class="col-md-12">
+              <label for="credit_card_name" class="form-label">Nombre</label>
+              <input type="text" class="form-control" id="credit_card_name" />
+            </div>
+            <div id="expira" class="d-flex flex-row justify-content-between">
+              <div class="col-md-4">
+                <label for="credit_card_mes" class="form-label"
+                  >Expira mes</label
+                >
+                <select
+                  class="form-select"
+                  aria-label="Mes"
+                  id="credit_card_mes"
+                >
+                  <option selected>Seleccione el mes</option>
+                  <option value="1">01</option>
+                  <option value="2">02</option>
+                  <option value="3">03</option>
+                  <option value="3">04</option>
+                  <option value="3">05</option>
+                  <option value="3">06</option>
+                  <option value="3">07</option>
+                  <option value="3">08</option>
+                  <option value="3">09</option>
+                  <option value="3">10</option>
+                  <option value="3">11</option>
+                  <option value="3">12</option>
+                </select>
+              </div>
+              <div class="col-12 col-md-4">
+                <label for="credit_card_anio" class="form-label"
+                  >Expira año</label
+                >
+                <select
+                  class="form-select"
+                  aria-label="Mes"
+                  id="credit_card_anio"
+                >
+                  <option selected>Seleccione el año</option>
+                  <option value="1">2023</option>
+                  <option value="2">2024</option>
+                  <option value="3">2025</option>
+                  <option value="3">2026</option>
+                  <option value="3">2027</option>
+                  <option value="3">2028</option>
+                  <option value="3">2029</option>
+                  <option value="3">2030</option>
+                </select>
+              </div>
+              <div class="col-12 col-md-3">
+                <label for="credit_ccv" class="form-label"
+                  >Código de seguridad</label
+                >
+                <input type="text" class="form-control" id="credit_card_ccv" />
+              </div>
+            </div>
+            <button type="submit" class="pagar btn btn-primary col-md-12">
+              Comprar
+            </button>
+          </form>
+        </div>
+        <div id="pago_transferencia">
+          <form class="row g-3">
+            <div class="col-md-12">
+              <label for="credit_card_number" class="form-label"
+                >CBU / CVU / Alias</label
+              >
+              <input
+                type="text"
+                limit="30"
+                class="form-control"
+                id="cbu_cvu_alias"
+              />
+            </div>
+            <div class="col-md-12">
+              <label for="credit_card_number" class="form-label">Token</label>
+              <input type="text" limit="30" class="form-control" id="Token" />
+            </div>
+            <button type="submit" class="pagar btn btn-primary col-md-12">
+              Comprar
+            </button>
+          </form>
+        </div>
       </form>
     </main>
 

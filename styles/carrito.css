@@ -1,0 +1,17 @@
+#form-carrito {
+  padding: 0 20%;
+}
+
+#pago_tarjeta {
+  display: flex;
+  flex-direction: column;
+}
+
+#pago_transferencia {
+  padding: 0 20%;
+  display: none;
+}
+
+.pagar {
+  margin-top: 3%;
+}
