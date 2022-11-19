@@ -11,4 +11,9 @@ const getProducts = async () => {
 
 const currentProducts = await getProducts();
 
-console.log(currentProducts);
+// si se apreta buscar o se selecciona una categoria
+// ocultar el carrousel
+// ocultar las cards de ofertas
+
+// generamos otro objeto que se puede llamar productosBuscados partiendo desde currentProducts filtrando por los criterios de busquedas
+// generamos nuevas cards mostrando los productos buscados

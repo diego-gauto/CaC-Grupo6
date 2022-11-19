@@ -12,6 +12,11 @@
   display: none;
 }
 
+#carrito {
+  padding: 0 5%;
+  margin-bottom: 3%;
+}
+
 .pagar {
   margin-top: 3%;
 }

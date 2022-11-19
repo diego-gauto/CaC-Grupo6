@@ -79,20 +79,28 @@ const generarCards = (productos) => {
 
     // Creamos la etiqueta Card
     let cardProductos = document.createElement("div");
-    cardProductos.className = "card m-3";
+    cardProductos.className = "col";
 
     let card = `
-              <img class="card-img-top h-50 w-50" src="${productos[key].img}" alt="Card image cap">
-              <div class="card-body">
-                  <h4 class="card-title">${productos[key].nombre}</h4>
-                  <p class="card-text">
-                      ${productos[key].descripcion}
-                  </p>
-                  <p class="card-text">
-                      ${productos[key].precio}
-                  </p>
-                  <a class="btn btn-primary" id="cart${productos[key].id}">Eliminar</a>
-              </div>
+                <div class="card">
+                  <img class="card-img-top" src="${productos[key].img}" alt="Card image">
+                  <div class="card-body">
+                      <h4 class="card-title">${productos[key].nombre}</h4>
+                      <p class="card-text">
+                        Categoría: ${productos[key].categoria}
+                      </p>
+                      <p class="card-text">
+                          ${productos[key].descripcion}
+                      </p>
+                      <p class="card-text">
+                          Precio: $ ${productos[key].precio},00
+                      </p>
+                      <a class="btn btn-primary" id="cart${productos[key].id}">Eliminar</a>
+                  </div>
+                  <div class="card-footer">
+                    <small class="text-muted">Fecha de ingreso ${productos[key].createdAt}</small>
+                  </div>
+                </div>
           `;
 
     cardProductos.innerHTML = card;
@@ -102,13 +110,13 @@ const generarCards = (productos) => {
 
     productCard.addEventListener("click", (evento) => {
       evento.preventDefault();
-      console.log(`${productos[key].id} eliminado`);
       delete productos[key];
-      console.log(productos);
       localStorage.setItem("carrito", JSON.stringify(productos));
       location.reload();
     });
   }
+  let totalCarrito = document.getElementById("total");
+  totalCarrito.textContent = total;
 };
 
 handleLoginLogout();
