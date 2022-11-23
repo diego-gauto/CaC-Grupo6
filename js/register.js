@@ -1,4 +1,5 @@
-import userExist from "./utils";
+
+//import userExist from "./utils";
 
 const formulario = document.getElementById(`formulario`);
 
@@ -15,8 +16,13 @@ formulario.addEventListener("submit",(e)=>{
       usuarios.push(user);
       localStorage.setItem ("usuarios", JSON.stringify(usuarios));
       localStorage.setItem ("currentUser", JSON.stringify(user));
+      alert("Su registro ha sido exitoso")
       window.location.href="../index.html"
    } else {
     alert("Este usuario ya se encuentra registrado");
     formulario.reset();
    }})
+
+   function userExist(userEmail, users) {
+    return users.some((user) => user.email === userEmail)
+  }

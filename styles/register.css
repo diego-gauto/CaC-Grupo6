@@ -1,0 +1,12 @@
+h2{
+    text-align: center;
+}
+.register-container{
+    align-items: center;
+    justify-content: center;
+    border:3px solid;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    background-color: rgb(239, 216, 228);
+}
