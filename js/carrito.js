@@ -63,7 +63,7 @@ const carritoMockeo = {
     createdAt: "2012-08-29T08:00:00.000Z",
   },
 };
-localStorage.setItem("carrito", JSON.stringify(carritoMockeo));
+//  localStorage.setItem("carrito", JSON.stringify(carritoMockeo));
 
 const carrito = JSON.parse(localStorage.getItem("carrito")) || {};
 
@@ -110,7 +110,10 @@ const generarCards = (productos) => {
 
     productCard.addEventListener("click", (evento) => {
       evento.preventDefault();
+      const products = JSON.parse(localStorage.getItem("products"));
+      products[productos[key].id] = productos[key];
       delete productos[key];
+      localStorage.setItem("products", JSON.stringify(products));
       localStorage.setItem("carrito", JSON.stringify(productos));
       location.reload();
     });

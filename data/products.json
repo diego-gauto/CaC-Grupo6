@@ -4,20 +4,20 @@
     "nombre": "Producto 1",
     "img": "../images/notebook.webp",
     "descripcion": "lorem insump 1",
-    "categoria": "electrodomesticos",
+    "categoria": "zapatillas",
     "precio": 1000,
     "descuento": 20,
     "stock": 10,
     "createdAt": "2012-08-21T08:00:00.000Z"
   },
   "2": {
-    "id": 1,
+    "id": 2,
     "nombre": "Producto 2",
     "img": "../images/notebook.webp",
     "descripcion": "lorem insump 2",
     "categoria": "electrodomesticos",
     "precio": 1000,
-    "descuento": 20,
+    "descuento": 15,
     "stock": 10,
     "createdAt": "2012-08-22T08:00:00.000Z"
   },
@@ -28,7 +28,7 @@
     "descripcion": "lorem insump 3",
     "categoria": "electrodomesticos",
     "precio": 1000,
-    "descuento": 20,
+    "descuento": 10,
     "stock": 10,
     "createdAt": "2012-08-23T08:00:00.000Z"
   },
@@ -39,7 +39,7 @@
     "descripcion": "lorem insump 4",
     "categoria": "electrodomesticos",
     "precio": 1000,
-    "descuento": 20,
+    "descuento": 5,
     "stock": 10,
     "createdAt": "2012-08-24T08:00:00.000Z"
   },
@@ -50,7 +50,7 @@
     "descripcion": "lorem insump 5",
     "categoria": "electrodomesticos",
     "precio": 1000,
-    "descuento": 20,
+    "descuento": 0,
     "stock": 10,
     "createdAt": "2012-08-25T08:00:00.000Z"
   },
@@ -61,7 +61,7 @@
     "descripcion": "lorem insump 6",
     "categoria": "electrodomesticos",
     "precio": 1000,
-    "descuento": 20,
+    "descuento": 0,
     "stock": 10,
     "createdAt": "2012-08-26T08:00:00.000Z"
   },
@@ -72,7 +72,7 @@
     "descripcion": "lorem insump 7",
     "categoria": "electrodomesticos",
     "precio": 1000,
-    "descuento": 20,
+    "descuento": 0,
     "stock": 10,
     "createdAt": "2012-08-27T08:00:00.000Z"
   },
@@ -83,7 +83,7 @@
     "descripcion": "lorem insump 8",
     "categoria": "electrodomesticos",
     "precio": 1000,
-    "descuento": 20,
+    "descuento": 0,
     "stock": 10,
     "createdAt": "2012-08-28T08:00:00.000Z"
   },
@@ -94,7 +94,7 @@
     "descripcion": "lorem insump 9",
     "categoria": "electrodomesticos",
     "precio": 1000,
-    "descuento": 20,
+    "descuento": 0,
     "stock": 10,
     "createdAt": "2012-08-29T08:00:00.000Z"
   },
@@ -105,7 +105,7 @@
     "descripcion": "lorem insump 10",
     "categoria": "electrodomesticos",
     "precio": 1000,
-    "descuento": 20,
+    "descuento": 0,
     "stock": 10,
     "createdAt": "2012-08-30T08:00:00.000Z"
   }
