@@ -15,9 +15,9 @@ export const handleLoginLogout = () => {
     if (evento.target.textContent === "Logout") {
       localStorage.removeItem("currentUser");
       evento.target.textContent = "Login";
-      evento.target.href = "login.html";
-      window.location.href = "index.html";
-    } else window.location.href = "login.html";
+      evento.target.href = "../pages/login.html";
+      window.location.href = "../index.html";
+    } else window.location.href = "../pages/login.html";
   });
 };
 

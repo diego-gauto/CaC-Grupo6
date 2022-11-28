@@ -5,6 +5,7 @@ const pagoTransferencia = document.getElementById("flexRadioTransferencia");
 const divTarjeta = document.getElementById("pago_tarjeta");
 const divTransferencia = document.getElementById("pago_transferencia");
 const buttonComprar = document.getElementsByClassName("pagar");
+const linkHome = document.getElementById("go-home");
 
 const carritoMockeo = {
   1: {
@@ -83,7 +84,9 @@ const generarCards = (productos) => {
 
     let card = `
                 <div class="card">
-                  <img class="card-img-top" src="${productos[key].img}" alt="Card image">
+                  <img class="card-img-top" src="${
+                    productos[key].img
+                  }" alt="Card image">
                   <div class="card-body">
                       <h4 class="card-title">${productos[key].nombre}</h4>
                       <p class="card-text">
@@ -93,12 +96,21 @@ const generarCards = (productos) => {
                           ${productos[key].descripcion}
                       </p>
                       <p class="card-text">
-                          Precio: $ ${productos[key].precio},00
+                          Precio: $ ${
+                            productos[key].descuento
+                              ? productos[key].precio *
+                                (1 - productos[key].descuento / 100)
+                              : productos[key].precio
+                          },00
                       </p>
-                      <a class="btn btn-primary" id="cart${productos[key].id}">Eliminar</a>
+                      <a class="btn btn-primary" id="cart${
+                        productos[key].id
+                      }">Eliminar</a>
                   </div>
                   <div class="card-footer">
-                    <small class="text-muted">Fecha de ingreso ${productos[key].createdAt}</small>
+                    <small class="text-muted">Fecha de ingreso ${
+                      productos[key].createdAt
+                    }</small>
                   </div>
                 </div>
           `;
@@ -109,18 +121,29 @@ const generarCards = (productos) => {
     let productCard = document.getElementById("cart" + productos[key].id);
 
     productCard.addEventListener("click", (evento) => {
-      evento.preventDefault();
-      const products = JSON.parse(localStorage.getItem("products"));
-      products[productos[key].id] = productos[key];
-      delete productos[key];
-      localStorage.setItem("products", JSON.stringify(products));
-      localStorage.setItem("carrito", JSON.stringify(productos));
-      location.reload();
+      const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+      if (currentUser) {
+        evento.preventDefault();
+        const products = JSON.parse(localStorage.getItem("products"));
+        products[productos[key].id] = productos[key];
+        delete productos[key];
+        localStorage.setItem("products", JSON.stringify(products));
+        localStorage.setItem("carrito", JSON.stringify(productos));
+        location.reload();
+      } else {
+        alert("Debe ingresar para poder comprar");
+      }
     });
   }
   let totalCarrito = document.getElementById("total");
   totalCarrito.textContent = total;
 };
+
+linkHome.addEventListener("click", (e) => {
+  e.preventDefault();
+  localStorage.setItem("onSearch", false);
+  location.href = "../index.html";
+});
 
 handleLoginLogout();
 

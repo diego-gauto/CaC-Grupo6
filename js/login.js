@@ -1,6 +1,6 @@
-import userExist, { contraseñaCorrecta } from "./utils.js";
+import userExist, { contraseñaCorrecta, handleLoginLogout } from "./utils.js";
 
-const usuarios = [
+/*const usuarios = [
   { email: "maradona@gmail", pass: "123" },
   { email: "rodolfo@gmail", pass: "123" },
 ];
@@ -20,6 +20,7 @@ const getPass = (userEmail, users) => {
 };*/
 
 const formLogin = document.getElementById(`formulario`);
+const linkHome = document.getElementById("go-home");
 
 formLogin.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -46,3 +47,11 @@ formLogin.addEventListener("submit", (e) => {
     window.location.href = "../index.html";
   }
 });
+
+linkHome.addEventListener("click", (e) => {
+  e.preventDefault();
+  localStorage.setItem("onSearch", false);
+  location.href = "../index.html";
+});
+
+handleLoginLogout();

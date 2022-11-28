@@ -12,6 +12,11 @@ const getProducts = async () => {
     localStorage.setItem("products", JSON.stringify(products));
     localStorage.setItem("carrito", JSON.stringify({}));
   }
+
+  if (localStorage.getItem("onSearch") === true)
+    products = JSON.parse(localStorage.getItem("searchProducts"));
+
+  console.log(products);
   return products;
 };
 
@@ -56,6 +61,10 @@ const search = () => {
   const banner = document.getElementById("banner-ofertas");
   carrousel.style.display = "none";
   banner.style.display = "none";
+  localStorage.setItem(
+    "searchProducts",
+    JSON.stringify(getSearchProducts(currentProducts))
+  );
   generarCards(getSearchProducts(currentProducts));
 };
 
@@ -75,7 +84,9 @@ const generarCards = (products) => {
 
     let card = `
                 <div class="card">
-                  <img class="card-img-top" src="${products[key].img}" alt="Card image">
+                  <img class="card-img-top" src="${
+                    products[key].img
+                  }" alt="Card image">
                   <div class="card-body">
                       <h4 class="card-title">${products[key].nombre}</h4>
                       <p class="card-text">
@@ -85,12 +96,21 @@ const generarCards = (products) => {
                           ${products[key].descripcion}
                       </p>
                       <p class="card-text">
-                          Precio: $ ${products[key].precio},00
+                          Precio: $ ${
+                            products[key].descuento
+                              ? products[key].precio *
+                                (1 - products[key].descuento / 100)
+                              : products[key].precio
+                          },00
                       </p>
-                      <a class="btn btn-primary" id="cart${products[key].id}">Agregar al carrito</a>
+                      <a class="btn btn-primary" id="cart${
+                        products[key].id
+                      }">Agregar al carrito</a>
                   </div>
                   <div class="card-footer">
-                    <small class="text-muted">Fecha de ingreso ${products[key].createdAt}</small>
+                    <small class="text-muted">Fecha de ingreso ${
+                      products[key].createdAt
+                    }</small>
                   </div>
                 </div>
           `;
@@ -101,13 +121,18 @@ const generarCards = (products) => {
     let productCard = document.getElementById("cart" + products[key].id);
 
     productCard.addEventListener("click", (evento) => {
-      evento.preventDefault();
-      const carrito = JSON.parse(localStorage.getItem("carrito"));
-      carrito[products[key].id] = products[key];
-      delete currentProducts[products[key].id];
-      localStorage.setItem("carrito", JSON.stringify(carrito));
-      localStorage.setItem("products", JSON.stringify(currentProducts));
-      localStorage.getItem("onSearch") ? search() : location.reload();
+      const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+      if (currentUser) {
+        evento.preventDefault();
+        const carrito = JSON.parse(localStorage.getItem("carrito"));
+        carrito[products[key].id] = products[key];
+        delete currentProducts[products[key].id];
+        localStorage.setItem("carrito", JSON.stringify(carrito));
+        localStorage.setItem("products", JSON.stringify(currentProducts));
+        localStorage.getItem("onSearch") ? search() : location.reload();
+      } else {
+        alert("Debe ingresar para poder comprar");
+      }
     });
   }
 };
