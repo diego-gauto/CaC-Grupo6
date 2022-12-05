@@ -20,3 +20,7 @@
 .pagar {
   margin-top: 3%;
 }
+
+#profile {
+  display: none;
+}

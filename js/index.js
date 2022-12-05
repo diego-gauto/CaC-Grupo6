@@ -68,9 +68,6 @@ const search = () => {
   generarCards(getSearchProducts(currentProducts));
 };
 
-const currentProducts = await getProducts();
-const offerProducts = getOfferProducts(currentProducts);
-
 const generarCards = (products) => {
   // Obtenemos el div que contendra las cards de productos
   let cards = document.getElementById("offers");
@@ -124,12 +121,22 @@ const generarCards = (products) => {
       const currentUser = JSON.parse(localStorage.getItem("currentUser"));
       if (currentUser) {
         evento.preventDefault();
-        const carrito = JSON.parse(localStorage.getItem("carrito"));
+        const carrito = JSON.parse(localStorage.getItem("carrito")) || {};
         carrito[products[key].id] = products[key];
         delete currentProducts[products[key].id];
         localStorage.setItem("carrito", JSON.stringify(carrito));
         localStorage.setItem("products", JSON.stringify(currentProducts));
-        localStorage.getItem("onSearch") ? search() : location.reload();
+        if (JSON.parse(localStorage.getItem("onSearch"))) {
+          const searchProducts = JSON.parse(
+            localStorage.getItem("searchProducts")
+          );
+          delete searchProducts[products[key].id];
+          localStorage.setItem(
+            "searchProducts",
+            JSON.stringify(searchProducts)
+          );
+        }
+        location.reload();
       } else {
         alert("Debe ingresar para poder comprar");
       }
@@ -149,13 +156,11 @@ linkHome.addEventListener("click", (e) => {
   location.reload();
 });
 
+const currentProducts = await getProducts();
+const offerProducts = getOfferProducts(currentProducts);
+
 handleLoginLogout();
 
-generarCards(offerProducts);
-
-// si se apreta buscar o se selecciona una categoria
-// ocultar el carrousel
-// ocultar las cards de ofertas
-
-// generamos otro objeto que se puede llamar productosBuscados partiendo desde currentProducts filtrando por los criterios de busquedas
-// generamos nuevas cards mostrando los productos buscados
+JSON.parse(localStorage.getItem("onSearch"))
+  ? generarCards(JSON.parse(localStorage.getItem("searchProducts")))
+  : generarCards(offerProducts);

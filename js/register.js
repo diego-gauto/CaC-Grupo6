@@ -31,3 +31,6 @@ linkHome.addEventListener("click", (e) => {
 });
 
 handleLoginLogout();
+
+const registrarse = document.getElementById("registrarse");
+registrarse.style.display = "none";
