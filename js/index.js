@@ -30,44 +30,6 @@ const getOfferProducts = (products) => {
   return offerProducts;
 };
 
-const getSearchProducts = (products) => {
-  const searchText = document.getElementById("search").value;
-  const category = document.getElementById("category").value;
-
-  console.log(category);
-
-  const searchProducts = {};
-  if (category != "Seleccione una categoría") {
-    for (const key in products) {
-      if (
-        products[key].categoria === category &&
-        products[key].nombre.includes(searchText)
-      ) {
-        searchProducts[products[key].id] = products[key];
-      }
-    }
-  } else {
-    for (const key in products) {
-      if (products[key].nombre.includes(searchText)) {
-        searchProducts[products[key].id] = products[key];
-      }
-    }
-  }
-  return searchProducts;
-};
-
-const search = () => {
-  const carrousel = document.getElementById("carouselExampleIndicators");
-  const banner = document.getElementById("banner-ofertas");
-  carrousel.style.display = "none";
-  banner.style.display = "none";
-  localStorage.setItem(
-    "searchProducts",
-    JSON.stringify(getSearchProducts(currentProducts))
-  );
-  generarCards(getSearchProducts(currentProducts));
-};
-
 const generarCards = (products) => {
   // Obtenemos el div que contendra las cards de productos
   let cards = document.getElementById("offers");
@@ -144,12 +106,6 @@ const generarCards = (products) => {
   }
 };
 
-buttonSearch.addEventListener("click", (e) => {
-  e.preventDefault();
-  localStorage.setItem("onSearch", true);
-  search();
-});
-
 linkHome.addEventListener("click", (e) => {
   e.preventDefault();
   localStorage.setItem("onSearch", false);
@@ -161,6 +117,4 @@ const offerProducts = getOfferProducts(currentProducts);
 
 handleLoginLogout();
 
-JSON.parse(localStorage.getItem("onSearch"))
-  ? generarCards(JSON.parse(localStorage.getItem("searchProducts")))
-  : generarCards(offerProducts);
+generarCards(offerProducts);
