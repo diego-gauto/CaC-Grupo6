@@ -1,5 +1,4 @@
 {
-  //ZAPATILLAS
   "1": {
     "id": 1,
     "nombre": "Zapatillas Puma RS-Fast Limiter",
@@ -88,8 +87,8 @@
     "stock": 15,
     "createdAt": "2012-08-28T08:00:00.000Z"
   },
-  
-  "9": { //SANDALIAS
+
+  "9": {
     "id": 9,
     "nombre": "Sandalias adidas Terrex Sumra W",
     "img": "../images/Sandalias adidas Terrex Sumra W.jpg",
@@ -177,8 +176,6 @@
     "stock": 10,
     "createdAt": "2012-09-06T08:00:00.000Z"
   },
-  
-  //BOTAS 
 
   "17": {
     "id": 17,
@@ -245,7 +242,7 @@
     "descuento": 0,
     "stock": 12,
     "createdAt": "2012-09-10T08:00:00.000Z"
-  }, 
+  },
   "23": {
     "id": 23,
     "nombre": "Bota Hush Puppies Chase",
@@ -256,7 +253,7 @@
     "descuento": 0,
     "stock": 16,
     "createdAt": "2012-09-10T08:00:00.000Z"
-  }, //ZAPATOS
+  },
   "24": {
     "id": 24,
     "nombre": "ZAPATO MELVILLE AZUL",
