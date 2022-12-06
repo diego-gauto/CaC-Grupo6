@@ -2,7 +2,7 @@
   "1": {
     "id": 1,
     "nombre": "Zapatillas Puma RS-Fast Limiter",
-    "img": "../images/Zapatilla puma 1.jpg",
+    "img": "../images/zapatilla puma 1.jpg",
     "descripcion": "la línea RS-Fast tiene un diseño elegante que es más rápido y más competitivo que cualquier otro modelo del Running System. Están influidas por los modelos de tendencia del 2000 para crear un estilo que es realmente actual.",
     "categoria": "zapatillas",
     "precio": 30000,
@@ -11,9 +11,9 @@
     "createdAt": "2012-08-21T08:00:00.000Z"
   },
   "2": {
-    "id": 1,
+    "id": 2,
     "nombre": "Zapatillas Adidas HOOPS 2.0 MID",
-    "img": "../images/Zapatilla Adidas HOOPS 2.0 MID.jpg",
+    "img": "../images/Zapatillas Adidas HOOPS 2.0 MID.jpg",
     "descripcion": "Un clásico estilo inspirado en el básquet. Estas zapatillas adidas de corte medio ofrecen una clásica energía deportiva y un moderno estilo urbano.",
     "categoria": "zapatillas",
     "precio": 25000,
